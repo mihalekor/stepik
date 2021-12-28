@@ -10,7 +10,6 @@ int /*_12*/ main()
   D2 *d2 = (D2 *)D1BaseToD2Base((D1 *)d3);
   cout << d3 << endl;
   cout << (D1 *)d3 << endl;
-  cout << (D2 *)d3 << endl;
   cout << d2 << endl;
   cout << (D1 *)d2 << endl;
 

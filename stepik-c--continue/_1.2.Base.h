@@ -43,12 +43,10 @@ Base const *D1BaseToD2Base(Base const *base)
   D1 const *pD1 = (D1 *)base;
   D3 *pD3 = (D3 *)pD1;
   D2 *pD2 = (D2 *)pD3;
-  // pD2->foo();
-  return (Base const *)pD2;
+  // return (Base const *)pD2;
 
-  //проверить решения:
-  // return (Base*)(D2*)(D3*)(D1*) base;
-  // return (D2*)(D3*) base;
+  //коротко решение
+  return (D2 *)(D3 *)(D1 *)base;
 }
 
 #endif // _1_2_BASE
