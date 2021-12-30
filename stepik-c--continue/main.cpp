@@ -1,9 +1,10 @@
-#include "_1.2.Base.h"
+#include "__2.1.print_values.h"
 #include <iostream>
 
 using namespace std;
 
-int /*_12*/ main()
+#include "__1.2.1.Base.h"
+int _121main()
 {
   D3 *d3 = new D3;
 
@@ -13,5 +14,12 @@ int /*_12*/ main()
   cout << d2 << endl;
   cout << (D1 *)d2 << endl;
 
+  return 0;
+}
+
+int main()
+{
+  print_values(cout, 5, 10, 1.2, "фигульки");
+  print_values(cout);
   return 0;
 }
