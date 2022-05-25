@@ -1,4 +1,14 @@
-#include "__2.1.print_values.h"
+/*
+Курс на степике Программирование на языке C++ (продолжение)
+https://stepik.org/course/3206/syllabus?auth=login
+Под каждое задание отдельный хедер
+
+"_"  - одна черта перед именем файла значит, что речь о первой части курса
+Программирование на языке C++: https://stepik.org/course/7/syllabus?auth=login
+
+"__" - две черты - речь о второй часте курсе( о продолжении)
+*/
+
 #include <iostream>
 
 using namespace std;
@@ -17,6 +27,7 @@ int _121main()
   return 0;
 }
 
+#include "__2.1.print_values.h"
 int main()
 {
   print_values(cout, 5, 10, 1.2, "фигульки");

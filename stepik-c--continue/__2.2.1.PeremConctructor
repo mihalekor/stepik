@@ -1,0 +1,43 @@
+/*
+Дополните класс Array перемещающим конструктором и перемещающим оператором присваивания.
+*/
+#ifndef __2_2_1_PEREMCONCTRUCTOR
+#define __2_2_1_PEREMCONCTRUCTOR
+#include <cstddef>
+#include <utility>
+
+template <class T>
+struct Array
+{
+  // все объявленные ниже методы уже реализованы
+  explicit Array(size_t size = 0);
+  Array(Array const &a);
+  Array &operator=(Array const &a);
+  ~Array();
+
+  size_t size() const;
+  T &operator[](size_t i);
+  T const &operator[](size_t i) const;
+
+  void swap(Array &a)
+  {
+    std::swap(a.data_, data_);
+    std::swap(a.size_, size_);
+  }
+
+  // реализуйте перемещающий конструктор
+  Array(Array &&a) { swap(a); }
+
+  // реализуйте перемещающий оператор присваивания
+  Array &operator=(Array &&a)
+  {
+    swap(a);
+    return *this;
+  }
+
+private:
+  size_t size_ = 0;
+  T *data_ = nullptr;
+};
+
+#endif // __2_2_1_PEREMCONCTRUCTOR
