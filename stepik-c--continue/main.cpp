@@ -28,9 +28,19 @@ int _121main()
 }
 
 #include "__2.1.print_values.h"
-int main()
+int main21()
 {
   print_values(cout, 5, 10, 1.2, "фигульки");
   print_values(cout);
+  return 0;
+}
+
+#include "__2.2.PeremConstructor.h"
+int main()
+{
+  Array<int> A(0);
+  Array<int> B(move(A));
+  const Array<int> *p = &B;
+  Array<int> C(move(*p));
   return 0;
 }
