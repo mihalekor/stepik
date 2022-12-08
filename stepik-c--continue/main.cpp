@@ -7,6 +7,7 @@ https://stepik.org/course/3206/syllabus?auth=login
 Программирование на языке C++: https://stepik.org/course/7/syllabus?auth=login
 
 "__" - две черты - речь о второй часте курсе( о продолжении)
+https://stepik.org/course/3206/syllabus
 */
 
 #include <iostream>
@@ -36,11 +37,18 @@ int main21()
 }
 
 #include "__2.2.PeremConstructor.h"
-int main()
+int main22()
 {
   Array<int> A(0);
   Array<int> B(move(A));
   const Array<int> *p = &B;
   Array<int> C(move(*p));
+  return 0;
+}
+
+#include "__2.3.newInC++14.h"
+int main()
+{
+
   return 0;
 }
